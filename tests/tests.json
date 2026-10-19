@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Browse and filter catalogue on desktop",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "public storefront",
+      "brand filtering",
+      "category filtering",
+      "maximum cash price",
+      "maximum deposit",
+      "maximum installment payment",
+      "payment frequency",
+      "RAM and storage filters",
+      "4G/5G and condition filters",
+      "available stock toggle",
+      "price sorting",
+      "newest-first sorting",
+      "product detail pricing"
+    ],
+    "description": "Verifies customers can combine catalogue filters and sorting and see the resulting products and accurate payment details.",
+    "steps": [
+      "Open the public TechLipa360 storefront",
+      "Open Filters and select a brand and category",
+      "Enter a maximum deposit and maximum installment payment, then select payment frequency, RAM, storage, network and condition",
+      "Change sorting to Price: Low to High and then Newest first",
+      "Turn Available stock only off and confirm any unavailable item is marked out of stock",
+      "Open an in-stock device and review its cash price, deposit and installment details"
+    ],
+    "expected": "The result list updates to match selected filters, price and newest sorting work, stock status is clear, and in-stock product details show the saved payment terms."
+  },
+  {
+    "name": "Use catalogue filters on a mobile screen",
+    "viewport": "mobile",
+    "covers": [
+      "mobile-friendly filters panel",
+      "responsive filter controls",
+      "clear all filters",
+      "mobile product catalogue"
+    ],
+    "description": "Verifies the catalogue filter panel remains readable and usable on a phone-sized viewport.",
+    "steps": [
+      "Open the storefront at a phone-sized viewport",
+      "Open Filters",
+      "Use the maximum deposit and payment fields and select a network",
+      "Clear all filters",
+      "Close and reopen Filters"
+    ],
+    "expected": "Filter fields fit the mobile screen without horizontal overflow, values can be changed, and Clear all filters restores the default results."
+  },
+  {
+    "name": "Staff sign-in and logout remain protected",
+    "viewport": "desktop",
+    "covers": [
+      "staff sign in gateway",
+      "authorized email check",
+      "staff dashboard authentication",
+      "logout returns to public storefront",
+      "role-based staff access"
+    ],
+    "description": "Verifies catalogue changes do not break the existing authorized staff sign-in and logout workflow.",
+    "steps": [
+      "Open the public storefront",
+      "Choose Staff sign in and enter an authorized staff email",
+      "Complete secure sign-in and confirm the staff dashboard is visible",
+      "Use the staff sign-out control"
+    ],
+    "expected": "Authorized staff can reach the protected dashboard and signing out returns to the public storefront."
+  },
+  {
+    "name": "Manage inventory and preserve pricing calculations",
+    "viewport": "desktop",
+    "covers": [
+      "inventory create and edit",
+      "automatic inventory serial",
+      "product image upload",
+      "inventory status",
+      "cash price",
+      "Lipa Mdogo downpayment",
+      "daily installment duration calculation",
+      "safe product deletion"
+    ],
+    "description": "Verifies staff can manage a product and that the existing price, downpayment and duration calculations remain intact.",
+    "setup": [
+      "Sign in as an authorized owner or manager and open Inventory"
+    ],
+    "steps": [
+      "Add a device with stock, cash price, downpayment and daily payment",
+      "Confirm the duration is calculated from the remaining balance and daily payment",
+      "Save the product and open its details",
+      "Edit product specifications and stock",
+      "Confirm its generated inventory serial and updated details remain visible"
+    ],
+    "expected": "The product is saved and editable, inventory serial generation remains automatic, and installment duration continues to be calculated from current price, deposit and daily payment."
+  },
+  {
+    "name": "Customer application continues to WhatsApp",
+    "viewport": "mobile",
+    "covers": [
+      "cash sale application",
+      "Lipa Mdogo application",
+      "customer ID and contact details",
+      "application persistence",
+      "WhatsApp redirect"
+    ],
+    "description": "Verifies the public application flow still saves customer details and opens WhatsApp with a prefilled application message.",
+    "steps": [
+      "Open an in-stock device from the storefront",
+      "Choose Apply for this device",
+      "Enter customer name, phone, ID number and location",
+      "Choose Cash or Lipa Mdogo and review payment details",
+      "Submit the application"
+    ],
+    "expected": "The application is saved and WhatsApp opens with a prefilled message for the TechLipa360 business number, containing the selected device and application details."
+  }
+]

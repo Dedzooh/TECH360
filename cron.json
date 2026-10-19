@@ -1,0 +1,14 @@
+[
+  {
+    "name": "hourly-overdue-reminders",
+    "cron": "0 * * * *",
+    "handler": "hourlyCommunicationSweep",
+    "timezone": "Africa/Nairobi"
+  },
+  {
+    "name": "daily-due-soon-reminders",
+    "cron": "0 9 * * *",
+    "handler": "dailyCommunicationSweep",
+    "timezone": "Africa/Nairobi"
+  }
+]
